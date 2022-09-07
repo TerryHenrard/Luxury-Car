@@ -1,0 +1,208 @@
+/*setup*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --color1: #101318;
+    --color2: #00bfff;
+    --color3: #292f3d;
+    --color4: #0a090a;
+}
+
+@font-face {
+    font-family: "font-1";
+    src: url(../../police/Exo-VariableFont_wght.ttf);
+}
+
+body {
+    font-family: "font-1";
+    scroll-behavior: smooth;
+    color: white;
+    background: var(--color1);
+    overflow-x: hidden;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*header*/
+header {
+    height: 70px;
+}
+
+nav {
+    background: #101318;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    z-index: 1000;
+    transition: 0.4s;
+}
+
+nav div {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    list-style: none;
+}
+
+nav div a {
+    margin: auto;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: white;
+}
+
+nav a {
+    color: var(--color2);
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: auto 15px;
+    text-decoration: none;
+}
+
+nav div a:hover {
+    color: var(--color2);
+}
+
+nav div a:hover:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 2px;
+    transform: scale(0);
+    background: var(--color2);
+    animation: nav-anim 0.3s ease-in-out forwards;
+    transform-origin: right;
+}
+
+@keyframes nav-anim {
+    100% {
+        transform: scale(1);
+    }
+}
+
+/*RS3 container*/
+.Audi-RS3 {
+    background: rgb(41, 47, 61);
+    background: linear-gradient(0deg,
+            rgba(29, 33, 43, 1) 0%,
+            rgba(16, 19, 24, 1) 100%);
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.RS3-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 50%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*footer*/
+.fa-twitter:before {
+    content: "\f099";
+}
+
+.fa-facebook:before {
+    content: "\f09a";
+}
+
+.fa-linkedin:before {
+    content: "\f08c";
+}
+
+.fa-instagram:before {
+    content: "\f16d";
+}
+
+.RS3-contact {
+    display: flex;
+    justify-content: space-around;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.RS3-photo-contact img {
+    height: 250px;
+}
+
+.RS3-presse-text h5 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 10px 0 0 0;
+}
+
+.RS3-presse {
+    height: 100%;
+    width: 30%;
+}
+
+.RS3-presse-img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 15px 0 0 0;
+}
+
+.RS3-presse-img span {
+    margin: 20px 20px 20px;
+}
+
+.RS3-presse-img span img {
+    margin: 0 20px 0;
+}
+
+.RS3-nous-contacter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.RS3-tel-mail h5 {
+    margin: 10px 0 8px 0;
+}
+
+.RS3-tel-mail h5,
+.RS3-tel-mail p,
+.footer-logos p,
+.footer-logos i {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.RS3-tel-mail a {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.footer-logos p {
+    font-weight: 600;
+}
+
+.footer-logos i {
+    font-size: 1.2rem;
+    margin: 8px 8px 0 0;
+}
+
+.RS3-copyright h6 {
+    margin: 2px 0 10px 0;
+    font-size: 1rem;
+    font-weight: 400;
+}

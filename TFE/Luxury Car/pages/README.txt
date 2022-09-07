@@ -1,0 +1,2 @@
+Les données rentrées dans le formulaire s'affiche uniquement si le site est lancé 
+depuis un serveur car sinon les cookies ne s'enregistrent forcément pas. Le plusgin "Live Server" de VS code fait l'affaire.

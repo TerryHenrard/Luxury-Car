@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Inscription/inscription.css">
+    <title>Luxury Car</title>
+</head>
+
+<body>
+    <form id="form">
+        <div class="container">
+            <h3>Inscription à Luxury Car</h3>
+            <label for="nom"><i class="fa-solid fa-file-signature"></i></label><input id="nom" type="text"
+            placeholder="Nom" required>
+            <label for="prenom"><i class="fa-solid fa-file-signature"></i></label><input id="prenom" type="text"
+            placeholder="Prénom" required>
+            <label for="genre"><i class="fa-solid fa-venus-mars"></i></label>
+            <select name="genre" id="genre" required>
+                <option value="">genre</option>
+                <option value="Homme">Homme</option>
+                <option value="Femme">Femme</option>
+                <option value="Non binaire">Non binaire</option>
+                <option value="LGBTQQI2SAA+">LGBTQQI2SAA+</option>
+            </select>
+            <label for="email"><i class="fa-regular fa-envelope"></i></label><input id="email" type="email"
+            placeholder="Email" required>
+            <label for="mot-de-passe"><i class="fa-solid fa-lock"></i></label><input id="mot-de-passe" type="password"
+            placeholder="Mot de passe" required>
+            <label for="confirmer-mot-de-passe"><i class="fa-solid fa-unlock"></i></label><input
+            id="confirmer-mot-de-passe" type="password" placeholder="Confirmer" required>
+            <input type="checkbox" id="cgv" required>
+            <label for="cgv">Veuillez accepter les cgv</label>
+            <input type="submit" value="S'inscrire !">
+        </div>
+    </form>
+    <script src="../Inscription/inscription.js"></script>
+    <script src="https://kit.fontawesome.com/2ab8c25fb3.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

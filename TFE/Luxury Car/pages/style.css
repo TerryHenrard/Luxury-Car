@@ -1,0 +1,470 @@
+/*Présentation oral TFE*/
+header * {
+    /* border: solid 1px white; */
+}
+section * {
+    /* border: solid 1px white; */
+}
+     footer * { 
+    /* border: solid 1px white; */
+}
+/*---------setup------*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --color1: #101318;
+    --color2: #00bfff;
+    --color3: #292f3d;
+    --color4: #0a090a;
+}
+
+@font-face {
+    font-family: "font-1";
+    src: url(../police/Exo-VariableFont_wght.ttf);
+}
+
+body {
+    font-family: "font-1";
+    scroll-behavior: smooth;
+    color: white;
+    background: var(--color1);
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/*---------header-------*/
+header {
+    height: 70px;
+}
+
+nav {
+    background: #101318;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    z-index: 1000;
+    transition: 0.4s;
+}
+nav div {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    list-style: none;
+}
+
+nav div a{
+    margin: auto;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: white;
+}
+
+nav a {
+    color: var(--color2);
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: auto 15px;
+    text-decoration: none;
+}
+
+nav div a:hover {
+    color: var(--color2);
+}
+
+nav div a:hover:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 2px;
+    transform: scale(0);
+    background: var(--color2);
+    animation: nav-anim 0.3s ease-in-out forwards;
+    transform-origin: right;
+}
+
+@keyframes nav-anim {
+    100% {
+        transform: scale(1);
+    }
+}
+
+/*--------section Audi-RS3--------*/
+.Audi-RS3 {
+    background: rgb(41, 47, 61);
+    background: linear-gradient(0deg,
+            rgba(41, 47, 61, 1) 0%,
+            rgba(16, 19, 24, 1) 100%);
+    height: 280vh;
+    width: 100%;
+}
+
+.RS3-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* display: grid;
+    grid-template-rows: 23% 12% 15% 15% 21% 14%; */
+}
+
+/*-------------RS3 slide--------------*/
+.RS3-slider {
+    width: 1400px;
+    height: 438px;
+    overflow: hidden;
+    margin:  50px auto;
+}
+
+.RS3-slides {
+    width: calc(1400px * 8);
+    animation: glisse 25s infinite cubic-bezier(0.5, -0.29, 0.5, 0.97);
+}
+
+.RS3-slides img {
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.RS3-slides img:nth-child(1),
+.RS3-slides img:nth-child(2),
+.RS3-slides img:nth-child(3),
+.RS3-slides img:nth-child(4),
+.RS3-slides img:nth-child(5){
+    transform: scale(1.03);
+}
+
+@keyframes glisse {
+    0% {
+        transform: translateX(0);
+    }
+
+    7.5% {
+        transform: translateX(0);
+    }
+
+    12.5% {
+        transform: translateX(-1400px);
+    }
+
+    20% {
+        transform: translateX(-1400px);
+    }
+
+    25% {
+        transform: translateX(-2800px);
+    }
+
+    32.5% {
+        transform: translateX(-2800px);
+    }
+
+    37.5% {
+        transform: translateX(-4200px);
+    }
+
+    45% {
+        transform: translateX(-4200px);
+    }
+
+    50% {
+        transform: translateX(-5600px);
+    }
+
+    57.5% {
+        transform: translateX(-5600px);
+    }
+
+    62.5% {
+        transform: translateX(-7000px);
+    }
+
+    70% {
+        transform: translateX(-7000px);
+    }
+
+    75% {
+        transform: translateX(-8400px);
+    }
+
+    82.5% {
+        transform: translateX(-8400px);
+    }
+
+    87.5% {
+        transform: translateX(-9800px);
+    }
+
+    95% {
+        transform: translateX(-9800px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/*-------------RS3 perf---------------*/
+.RS3-perf {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.RS3-perf div {
+    width: 20%;
+    height: 100%;
+    position: relative;
+}
+
+.RS3-perf div::after {
+    content: "";
+    position: absolute;
+    height: 80%;
+    width: 1px;
+    background: #C22F36;
+    top: 50%;
+    left: -16.71%;
+    transform: translate(-50%, -50%);
+    filter: brightness(150%);
+    box-shadow: 0px 0px 7px 1px #C22F36;
+    animation: shadow 2s linear infinite;
+}
+@keyframes shadow {
+    0%{
+        box-shadow: 0px 0px 7px 1px #C22F36;
+    }
+    50%{
+        box-shadow: 0px 0px 8px 2px #C22F36;
+    }
+    100%{
+        box-shadow: 0px 0px 7px 1px #C22F36;
+    }
+}
+
+.RS3-perf div p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+    padding: 5px 0;
+}
+
+.RS3-p-price,
+.RS3-p-power,
+.RS3-p-speed,
+.RS3-p-torque {
+    width: 80%;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.RS3-p-0100 {
+    position: absolute;
+    left: 50%;
+    top: 19%;
+    transform: translate(-50%, -50%);
+}
+
+.RS3-p-62830,
+.RS3-p-294,
+.RS3-p-38,
+.RS3-p-500 {
+    width: 100%;
+    position: absolute;
+    top: 59%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+}
+
+/*--------------RS3 description-------------*/
+.RS3-description {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 300px;
+    margin: 30px 0;
+}
+
+.RS3-description div {
+    width: 22%;
+}
+
+.RS3-description h4 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.RS3-description p {
+    font-size: 0.9rem;
+    margin: 50px auto 0 auto;
+    width: 90%;
+    text-align: justify;
+    line-height: 22px;
+}
+
+/*-----------------RS3 audio------------------*/
+.RS3-audio {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.RS3-audio h3 {
+    font-size: 2rem;
+    display: inline;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.RS3-audio img {
+    height: 240px;
+    cursor: pointer;
+}
+
+#RS3-button-sound {
+    width: 20%;
+    position: absolute;
+}
+#RS3-motor{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0 0 0 10px;
+}
+
+/*---------------RS3 video---------------*/
+.RS3-videos{
+    height: 550px;
+}
+.RS3-videos-youtube {
+    display: flex;
+    justify-content: space-around;
+    height: 91.2%;
+    width: 100%;
+}
+
+.RS3-videos h3 {
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 50px 0 0 0;
+}
+
+#RS3-birth,
+#RS3-drive {
+    margin: auto;
+    width: 46%;
+    height: 80%;
+}
+/*-----------------RS3 en bref--------------*/
+.RS3-enbref {
+    width: 60%;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.RS3-enbref h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 25px;
+}
+
+.RS3-enbref p {
+    text-align: justify;
+    margin: 70px auto 0 auto;
+    font-size: 0.9rem;
+    line-height: 22px;
+}
+/*--------------RS3-contact--------------*/
+.fa-twitter:before {
+    content: "\f099";
+}
+.fa-facebook:before {
+    content: "\f09a";
+}
+.fa-linkedin:before {
+    content: "\f08c";
+}
+.fa-instagram:before {
+    content: "\f16d";
+}
+.RS3-contact{
+    display: flex;
+    justify-content: space-around;
+    background: rgba(0, 0, 0, 0.5);
+}
+.RS3-photo-contact img{
+    height: 250px;
+}
+.RS3-presse-text h5{
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 10px 0 0 0;
+}
+.RS3-presse{
+    height: 100%;
+    width: 30%;
+}
+.RS3-presse-img{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   width: 100%;
+   margin: 15px 0 0 0;
+}
+.RS3-presse-img span{
+    margin: 20px 20px 20px;
+}
+.RS3-presse-img span img{
+    margin: 0 20px 0;
+}
+.RS3-nous-contacter{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.RS3-tel-mail h5{
+    margin: 10px 0 8px 0;
+}
+.RS3-tel-mail h5,
+.RS3-tel-mail p,
+.footer-logos p,
+.footer-logos i{
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+.RS3-tel-mail a{
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+.footer-logos p{
+    font-weight: 600;
+}
+.footer-logos i{
+    font-size: 1.2rem;
+    margin: 8px 8px 0 0 ;
+}
+.RS3-copyright h6{
+    margin: 2px 0 10px 0;
+    font-size: 1rem;
+    font-weight: 400;
+}
